@@ -17,4 +17,10 @@ public:
 
     UPROPERTY(EditAnywhere, Category = "Longer Train Station Names Types")
     TSoftClassPtr<UFGInteractWidget> Widget_TrainStationClass;
+
+    // Hold hard references to the edited class and function to prevent our edits from being undone by garbage collection
+    UPROPERTY()
+    UClass* WidgetClass;
+    UPROPERTY()
+    UFunction* UberGraphFunction;
 };
